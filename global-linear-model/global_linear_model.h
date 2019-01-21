@@ -1,43 +1,54 @@
-#pragma once
+ï»¿#pragma once
 #include<iostream>
-#include<map>
+#include<unordered_map>
 #include<vector>
-#include<cmath>//×ÔÈ»¶ÔÊıµÄÖ¸Êı¡£
+#include<cmath>//è‡ªç„¶å¯¹æ•°çš„æŒ‡æ•°ã€‚
 #include <algorithm>  
 #include"dataset.h"
 #include "time.h"
 #include<numeric>
 #include"windows.h"
+#include<map>
 using namespace std;
 class global_linear_model
 {
 public:
 	void create_feature_space();
-	void online_training();
-	global_linear_model();
-	//´æ´¢¡£
+	void online_training(bool averaged, bool shuffle, int iterator, int exitor);
+	global_linear_model(string &train_, string &dev_, string &test_);
+	//å­˜å‚¨ã€‚
 	void save_file(int i);
 	~global_linear_model();
 private:
-	//»ù´¡Êı¾İ¼¯¡£
+	//åŸºç¡€æ•°æ®é›†ã€‚
 	dataset train;
 	dataset dev;
 	dataset test;
-	map<string, int> model;//ÌØÕ÷¿Õ¼ä¡£
-	map<string, int> tag;//´ÊĞÔ
-	vector<int> w;//Ò»Î¬µÄÌØÕ÷È¨ÖØ¡£
+	unordered_map<string, int> model;//ç‰¹å¾ç©ºé—´ã€‚
+	map<string, int> tag;//è¯æ€§
 	vector<string> vector_tag;
-	vector<string> feature;//
+
+	vector<int> w;
+	vector<int> v;
+	vector<int> update_time;
+
+	vector<string> feature;
 	vector<vector<int>> head_prob;
-	//´´½¨ÌØÕ÷¿Õ¼ä¡£
+	//åˆ›å»ºç‰¹å¾ç©ºé—´ã€‚
 	vector<string> create_feature(const sentence &sentence, int pos);
-	//ÔÚÏßËã·¨
-	void update_w(const sentence &sen,const vector<string> &max_sentence_tag );
-	vector<string> max_score_sentence_tag(const sentence &sen);
-	vector<int> count_score(const vector<string> &feature);
+	//åœ¨çº¿ç®—æ³•
+	void update_w(const sentence &sen,const vector<string> &max_sentence_tag ,int current_time);
+
+	
+	vector<string> max_score_sentence_tag(const sentence &sen,bool);
+	
+	vector<int> count_score(const vector<string> &feature,bool);
+	
 	vector<int> get_id(vector<string> &feature);
-	//ÆÀ¼Û¡£
-	double evaluate(dataset);
+	
+	//è¯„ä»·ã€‚
+	
+	double evaluate(dataset &, bool averaged);
 };
 
 #pragma once

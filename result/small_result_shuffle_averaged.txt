@@ -1,0 +1,87 @@
+train.conll.txt共803个句子，共20454个词
+dev.conll.txt共1910个句子，共50319个词
+ the total number of features is 73332
+using V to predict dev data...
+iterator 0
+train.conll.txt=0.951648
+dev.conll.txt=0.849262
+Use Time:3.759
+iterator 1
+train.conll.txt=0.978684
+dev.conll.txt=0.868797
+Use Time:3.73
+iterator 2
+train.conll.txt=0.987337
+dev.conll.txt=0.873726
+Use Time:3.815
+iterator 3
+train.conll.txt=0.991982
+dev.conll.txt=0.875773
+Use Time:3.738
+iterator 4
+train.conll.txt=0.994524
+dev.conll.txt=0.877502
+Use Time:3.608
+iterator 5
+train.conll.txt=0.995502
+dev.conll.txt=0.878793
+Use Time:3.637
+iterator 6
+train.conll.txt=0.995991
+dev.conll.txt=0.87927
+Use Time:3.56
+iterator 7
+train.conll.txt=0.99648
+dev.conll.txt=0.879608
+Use Time:3.593
+iterator 8
+train.conll.txt=0.997164
+dev.conll.txt=0.879608
+Use Time:3.575
+iterator 9
+train.conll.txt=0.997409
+dev.conll.txt=0.879707
+Use Time:3.579
+iterator 10
+train.conll.txt=0.997458
+dev.conll.txt=0.879548
+Use Time:3.578
+iterator 11
+train.conll.txt=0.997555
+dev.conll.txt=0.879469
+Use Time:3.571
+iterator 12
+train.conll.txt=0.997702
+dev.conll.txt=0.879688
+Use Time:3.617
+iterator 13
+train.conll.txt=0.9978
+dev.conll.txt=0.879727
+Use Time:3.581
+iterator 14
+train.conll.txt=0.997947
+dev.conll.txt=0.879807
+Use Time:3.573
+iterator 15
+train.conll.txt=0.998142
+dev.conll.txt=0.880085
+Use Time:3.582
+iterator 16
+train.conll.txt=0.998289
+dev.conll.txt=0.880045
+Use Time:3.58
+iterator 17
+train.conll.txt=0.998387
+dev.conll.txt=0.880125
+Use Time:3.559
+iterator 18
+train.conll.txt=0.998582
+dev.conll.txt=0.880681
+Use Time:3.562
+iterator 19
+train.conll.txt=0.998631
+dev.conll.txt=0.88088
+Use Time:3.569
+train.conll.txt最大值是：=0.998631在19次
+dev.conll.txt最大值是：=0.88088在19次
+Use Time:72.409
